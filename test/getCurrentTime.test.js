@@ -13,7 +13,7 @@ describe('getCurrentTime', function () {
                 "version": "1.0"
             }
 
-            return axios.post(envConfig.getBaseURI() + "/system", body, envConfig.getHeaders)
+            return axios.post(envConfig.getBaseURI() + "/system", body, envConfig.getHeaders())
                 .then(res => {
                     //console.log(res.data);
 
@@ -33,7 +33,7 @@ describe('getCurrentTime', function () {
                 "version": "1.0"
             }
 
-            return axios.post(envConfig.getBaseURI() + "/system", body, envConfig.getHeaders)
+            return axios.post(envConfig.getBaseURI() + "/system", body, envConfig.getHeaders())
                 .then(res => {
                     //console.log(res.data);
 
