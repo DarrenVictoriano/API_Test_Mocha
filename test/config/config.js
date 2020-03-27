@@ -12,7 +12,7 @@ module.exports = {
         axiosConfig = {
             headers: {
                 'Content-Type': 'application/json',
-                'X-AUth-PSK': AUTH_CODE
+                'X-Auth-PSK': AUTH_CODE
             }
         }
         return axiosConfig;
