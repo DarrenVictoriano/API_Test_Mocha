@@ -1,14 +1,14 @@
 const axios = require('axios');
-const envConfig = require('./test/config/config.js');
+const envConfig = require('./config/default.js');
 
 body = {
-    "method": "getCurrentTim",
+    "method": "getCurrentTime",
     "id": 51,
     "params": [],
     "version": "1.0"
 }
 
-axios.post(envConfig.getBaseURI() + "/system", body, envConfig.getHeaders())
+axios.post(envConfig.getBaseURI() + "/system", body, envConfig.getHeaders(), envConfig.getBasicAuth())
     .then(res => {
         console.log(res.data);
     });

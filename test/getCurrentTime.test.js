@@ -1,4 +1,4 @@
-const envConfig = require('./config/config');
+const envConfig = require('../config/default');
 const axios = require('axios');
 const expect = require('chai').expect;
 
