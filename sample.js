@@ -1,26 +1,14 @@
 const axios = require('axios');
-const assert = require('chai').assert;
-const expect = require('chai').expect;
-//const envConfig = require('../../config/config');
+const envConfig = require('./test/config/config.js');
 
-describe('Sample_Mocha_Test', function () {
-    let responseData;
+body = {
+    "method": "getCurrentTim",
+    "id": 51,
+    "params": [],
+    "version": "1.0"
+}
 
-    before('send HTTP request via axios', function () {
-        responseData = 'hello';
+axios.post(envConfig.getBaseURI() + "/system", body, envConfig.getHeaders())
+    .then(res => {
+        console.log(res.data);
     });
-
-    context('with string arguments', function () {
-        it('should equal hello', function () {
-
-            // return async func here
-
-            expect(responseData).to.equal('hello');
-        });
-    });
-    context('with non string arguments', function () {
-        it('should not equal hell', function () {
-            expect(1).to.not.equal('hell');
-        });
-    });
-});
